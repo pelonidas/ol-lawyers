@@ -24,22 +24,27 @@ export default function Header() {
   const [_, setScrollLocked] = useScrollLock();
 
   return (
-    <nav className={'container sticky top-0 bg-primary'}>
+    <nav className={'container sticky top-0 z-50 bg-primary shadow-md'}>
       <div className={'flex h-[65px] items-center justify-between'}>
         <h3 className={'font-playfair text-xl'}>
           <span className={'font-bold'}>online</span>launch
         </h3>
-        <Hamburger toggled={isOpen} toggle={(val) => {
-          setScrollLocked((c) => !c)
-          setIsOpen(val)
-        }} size={24} />
+        <Hamburger
+          hideOutline={true}
+          toggled={isOpen}
+          toggle={(val) => {
+            setScrollLocked((c) => !c);
+            setIsOpen(val);
+          }}
+          size={24}
+        />
       </div>
       {/* height of navbar 65px + sum of dividing borders 2px + mt-4 separating top segment and ul */}
       <motion.div
         transition={{ ease: 'easeInOut', duration: 0.55 }}
         variants={variants}
         animate={isOpen ? 'open' : 'closed'}
-        className={`mt-4 flex h-[calc(100vh-67px-16px)] flex-col pb-8 ${clsx({
+        className={`mt-4 flex h-[calc(100vh-67px-14px)] flex-col pb-8 ${clsx({
           hidden: !isOpen,
         })}`}
       >
@@ -65,11 +70,7 @@ export default function Header() {
             size={'40px'}
           />
         </div>
-        <button
-          className={'mt-6 h-[55px] bg-secondary transitio font-lato font-bold uppercase'}
-        >
-          Získať ONLINE stratégiu
-        </button>
+        <button className={'btn-primary mt-6'}>Získať ONLINE stratégiu</button>
       </motion.div>
     </nav>
   );

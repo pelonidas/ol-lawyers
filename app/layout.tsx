@@ -1,4 +1,5 @@
 import { Lato, Playfair_Display, Raleway } from '@next/font/google';
+import Footer from './footer';
 import './globals.css';
 import Header from './header';
 
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={'bg-primary text-white'}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
