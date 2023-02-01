@@ -449,22 +449,80 @@ export default function Home() {
 
       <section
         className={
-          'bg-primaryDarker px-8 py-8 text-center font-raleway xl:px-0'
+          'bg-primaryDarker px-8 py-8 text-center font-raleway xl:px-0 xl:py-20'
         }
       >
-        <h5>Máte ďalšie otázky?</h5>
-        <h2 className={'mt-6 font-playfair text-3xl'}>
-          Napíšte nám ešte dnes!
-        </h2>
-        <RibbonSegment className={'my-4'} variant={'darker'} />
-        <p>
-          Naši odborníci na digitálny marketing vytvorili množstvo úspešných
-          digitálnych marketingových kampaní pre firmy, ktoré chcú zvýšiť počet
-          potenciálnych zákazníkov a kvalitnú návštevnosť webových stránok.
-        </p>
-        <button className={'btn-primary mt-8 w-full'}>
-          Opýtajte sa ešte dnes
-        </button>
+        <div
+          className={
+            'relative xl:mx-auto xl:max-w-[1365px] xl:border xl:pb-14 xl:pt-8'
+          }
+        >
+          <h5 className={'xl:text-xl'}>Máte ďalšie otázky?</h5>
+          <h2 className={'mt-6 font-playfair text-3xl xl:mt-2'}>
+            Napíšte nám ešte dnes!
+          </h2>
+          <RibbonSegment
+            className={'my-4 xl:my-3 xl:mx-auto xl:max-w-[600px]'}
+            variant={'darker'}
+          />
+          <p className={'xl:mx-auto xl:max-w-[1060px] xl:text-xl'}>
+            Naši odborníci na digitálny marketing vytvorili množstvo úspešných
+            digitálnych marketingových kampaní pre firmy, ktoré chcú zvýšiť
+            počet potenciálnych zákazníkov a kvalitnú návštevnosť webových
+            stránok.
+          </p>
+          <Button className={'mt-8 w-full xl:mt-10 xl:max-w-[300px]'}>
+            Opýtajte sa ešte dnes
+          </Button>
+          {/* top-left */}
+          <div
+            className={
+              'absolute left-5 top-5 hidden h-14 w-24 border-l border-t border-white xl:block'
+            }
+          />
+          {/* bottom-right */}
+          <div
+            className={
+              'absolute bottom-5 right-5 hidden h-14 w-24 border-r border-b border-white xl:block'
+            }
+          />
+          {/* bottom-left */}
+          <div
+            className={
+              'absolute bottom-5 left-5 hidden h-[185px] w-[185px] border-l border-b border-white xl:block'
+            }
+          >
+            <div
+              className={
+                'absolute left-5 bottom-5 hidden h-24 w-14 border-l border-b border-white xl:block'
+              }
+            >
+              <div
+                className={
+                  'absolute left-4 bottom-4 hidden h-10 w-4 border-l border-b border-white xl:block'
+                }
+              />
+            </div>
+          </div>
+          {/* top-right */}
+          <div
+            className={
+              'absolute top-5 right-5 hidden h-[185px] w-[185px] border-r border-t border-white xl:block'
+            }
+          >
+            <div
+              className={
+                'absolute right-5 top-5 hidden h-24 w-14 border-r border-t border-white xl:block'
+              }
+            >
+              <div
+                className={
+                  'absolute right-4 top-4 hidden h-10 w-4 border-r border-t border-white xl:block'
+                }
+              />
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );
