@@ -238,19 +238,21 @@ export default function Home() {
       </section>
 
       <section className={'bg-white py-8 text-primary xl:py-20'}>
-        <div className={'container flex flex-col'}>
+        <div className={'container flex flex-col xl:items-center'}>
           <h2 className={'text-center font-playfair text-3xl'}>
             Pre koho je <span className={'font-bold'}>Online Launch</span>{' '}
             určený?
           </h2>
           <RibbonSegment
             variant={'light'}
-            className={'mt-4 mb-6 xl:max-w-[600px]'}
+            className={'mt-4 mb-6 xl:mb-10 xl:max-w-[600px]'}
           />
           <div
-            className={'grid grid-cols-2 text-center font-raleway font-medium'}
+            className={
+              'grid grid-cols-2 text-center font-raleway font-medium xl:w-full xl:max-w-[1150px] xl:grid-cols-4 xl:divide-x'
+            }
           >
-            <div className={'pr-2 pb-4'}>
+            <div className={'pr-2 pb-4 xl:p-0'}>
               <div className={'relative mx-auto mb-4 w-min'}>
                 <div
                   className={
@@ -263,10 +265,14 @@ export default function Home() {
                   }
                 ></div>
               </div>
-              <p>Pre začínajúcu právnicku kanceláriu</p>
+              <p className={'xl:mx-auto xl:max-w-[180px] xl:text-xl'}>
+                Pre začínajúcu právnicku kanceláriu
+              </p>
             </div>
 
-            <div className={'border-l border-primary pl-2 pb-4'}>
+            <div
+              className={'border-l border-primary pl-2 pb-4 xl:border-0 xl:p-0'}
+            >
               <div className={'relative mx-auto mb-4 w-min'}>
                 <div
                   className={
@@ -279,10 +285,14 @@ export default function Home() {
                   }
                 ></div>
               </div>
-              <p>Pre právnicku kanceláriu bez výsledkov online</p>
+              <p className={'xl:mx-auto xl:max-w-[180px] xl:text-xl'}>
+                Pre právnicku kanceláriu bez výsledkov online
+              </p>
             </div>
 
-            <div className={'border-t border-primary pt-4 pr-2'}>
+            <div
+              className={'border-t border-primary pt-4 pr-2 xl:border-0 xl:p-0'}
+            >
               <div className={'relative mx-auto mb-4 w-min'}>
                 <div
                   className={
@@ -295,10 +305,16 @@ export default function Home() {
                   }
                 ></div>
               </div>
-              <p>Pre právnicke kancelárie bez online stratégie</p>
+              <p className={'xl:mx-auto xl:max-w-[180px] xl:text-xl'}>
+                Pre právnicke kancelárie bez online stratégie
+              </p>
             </div>
 
-            <div className={'border-t border-l border-primary pt-4 pl-2'}>
+            <div
+              className={
+                'border-t border-l border-primary pt-4 pl-2 xl:border-0 xl:p-0'
+              }
+            >
               <div className={'relative mx-auto mb-4 w-min'}>
                 <div
                   className={
@@ -311,84 +327,124 @@ export default function Home() {
                   }
                 ></div>
               </div>
-              <p>Pre právnikov, ktorí chcú rásť</p>
+              <p className={'xl:mx-auto xl:max-w-[180px] xl:text-xl'}>
+                Pre právnikov, ktorí chcú rásť
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className={'bg-primary'}>
-        <div className={'container bg-primaryDarker pt-8 pb-6'}>
-          <div className={'text-center font-raleway text-white/80'}>
-            <div className={'h-[400px] bg-slate-400'} />
-            <h5 className={'mt-4 mb-2 text-xl'}>Jozko mrkvicka</h5>
-            <h6 className={'font-light'}>CEO & Founder</h6>
+      <section
+        className={'bg-primary xl:relative xl:bg-primaryDarker xl:py-20'}
+      >
+        <div
+          className={
+            'absolute inset-y-0 left-0 right-[30%] hidden bg-primary xl:block'
+          }
+        ></div>
+        <div className={'xl:mx-auto xl:flex xl:max-w-[1285px] xl:gap-28'}>
+          <div
+            className={
+              'container bg-primaryDarker pt-8 pb-6 xl:z-20 xl:order-last xl:max-w-[510px] xl:bg-transparent xl:pt-0'
+            }
+          >
+            <div
+              className={'text-center font-raleway text-white/80 xl:text-start'}
+            >
+              <div className={'h-[400px] bg-slate-400 xl:h-[650px]'} />
+              <div className={'xl:pl-[280px]'}>
+                <h5 className={'mt-4 mb-2 text-xl'}>Jozko mrkvicka</h5>
+                <h6 className={'font-light'}>CEO & Founder</h6>
+              </div>
+            </div>
+          </div>
+          <div
+            className={
+              'container pt-6 pb-8 font-raleway text-white xl:z-20 xl:p-0'
+            }
+          >
+            <h2 className={'font-playfair text-3xl'}>
+              Získajte konzultáciu pre vás,
+            </h2>
+            <p className={'mt-2 mb-6 text-xl text-white/80 xl:text-2xl'}>
+              vďaka ktorej zistíte potenciál online sveta.
+            </p>
+            <p className={'xl:mt-9 xl:text-xl'}>
+              Vďaka tejto{' '}
+              <span className={'font-semibold'}>bezplatnej konzultácií</span>{' '}
+              budete jasne rozumieť ďalším krokom, ktoré môžete podniknúť, aby
+              vaša kancelária začala generovať konzistentné a spoľahlivé
+              výsledky s online kampanami
+            </p>
+            <h3
+              className={
+                'mt-8 mb-6 font-playfair text-xl font-semibold xl:mt-16 xl:mb-9 xl:text-2xl'
+              }
+            >
+              Táto konzultácia je dokonalá pre:
+            </h3>
+            <ul className={'flex flex-col gap-7'}>
+              {[
+                <>
+                  Kancelárie, ktoré chcú previesť svoje súčasné webové stránky
+                  na{' '}
+                  <span className={'font-bold'}>
+                    vysokokvalitný a efektívny
+                  </span>{' '}
+                  online marketing.
+                </>,
+                <>
+                  Kancelárie, ktoré chcú preniesť svoje offline podnikanie do{' '}
+                  <span className={'font-bold'}>online sveta</span>.
+                </>,
+                <>
+                  Kancelárie ktoré chcú porozumieť tomu ako dokážu zlepšiť{' '}
+                  <span className={'font-bold'}>ich výsledky</span> v online
+                  priestore pomocou kampaní.
+                </>,
+                <>
+                  Kancelárie, ktoré hľadajú príležitosť ako maximalizovať{' '}
+                  <span className={'font-bold'}>
+                    množstvo a hodnotu dopytov
+                  </span>
+                  .
+                </>,
+                <>
+                  Kancelárie, ktoré hľadajú{' '}
+                  <span className={'font-bold'}>spoľahlivú agentúru</span>,
+                  vďaka ktorej bude ich spoločnosť prioritou.
+                </>,
+              ].map((item, index) => (
+                <li className={'flex gap-7 xl:text-xl'} key={index}>
+                  <div className={'relative'}>
+                    <div
+                      className={
+                        'absolute -right-[1px] top-0 h-2 w-2 rounded-full bg-[#ECEAD7] xl:h-[10px] xl:w-[10px]'
+                      }
+                    />
+                    <div
+                      className={
+                        'h-4 w-4 rounded-full bg-white/5 backdrop-blur-[35px] xl:h-8 xl:w-8'
+                      }
+                    ></div>
+                  </div>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <Button className={'mt-8 w-full xl:hidden'}>
+              Získať Konzultáciu Zadarmo
+            </Button>
           </div>
         </div>
-        <div className={'container pt-6 pb-8 font-raleway text-white'}>
-          <h2 className={'font-playfair text-3xl'}>
-            Získajte konzultáciu pre vás,
-          </h2>
-          <p className={'mt-2 mb-6 text-xl text-white/80'}>
-            vďaka ktorej zistíte potenciál online sveta.
-          </p>
-          <p>
-            Vďaka tejto{' '}
-            <span className={'font-semibold'}>bezplatnej konzultácií</span>{' '}
-            budete jasne rozumieť ďalším krokom, ktoré môžete podniknúť, aby
-            vaša kancelária začala generovať konzistentné a spoľahlivé výsledky
-            s online kampanami
-          </p>
-          <h3 className={'mt-8 mb-6 font-playfair text-xl font-semibold'}>
-            Táto konzultácia je dokonalá pre:
-          </h3>
-          <ul className={'flex flex-col gap-7'}>
-            {[
-              <>
-                Kancelárie, ktoré chcú previesť svoje súčasné webové stránky na{' '}
-                <span className={'font-bold'}>vysokokvalitný a efektívny</span>{' '}
-                online marketing.
-              </>,
-              <>
-                Kancelárie, ktoré chcú preniesť svoje offline podnikanie do{' '}
-                <span className={'font-bold'}>online sveta</span>.
-              </>,
-              <>
-                Kancelárie ktoré chcú porozumieť tomu ako dokážu zlepšiť{' '}
-                <span className={'font-bold'}>ich výsledky</span> v online
-                priestore pomocou kampaní.
-              </>,
-              <>
-                Kancelárie, ktoré hľadajú príležitosť ako maximalizovať{' '}
-                <span className={'font-bold'}>množstvo a hodnotu dopytov</span>.
-              </>,
-              <>
-                Kancelárie, ktoré hľadajú{' '}
-                <span className={'font-bold'}>spoľahlivú agentúru</span>, vďaka
-                ktorej bude ich spoločnosť prioritou.
-              </>,
-            ].map((item, index) => (
-              <li className={'flex gap-7'} key={index}>
-                <div className={'relative'}>
-                  <div
-                    className={
-                      'absolute -right-[1px] top-0 h-2 w-2 rounded-full bg-[#ECEAD7]'
-                    }
-                  />
-                  <div
-                    className={
-                      'h-4 w-4 rounded-full bg-white/5 backdrop-blur-[35px]'
-                    }
-                  ></div>
-                </div>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-          <button className={'btn-primary mt-8 w-full'}>
-            Získať Konzultáciu Zadarmo
-          </button>
-        </div>
+        <Button
+          className={
+            'mx-auto hidden xl:relative xl:z-50 xl:mt-16 xl:block xl:max-w-[380px]'
+          }
+        >
+          Získať Konzultáciu Zadarmo
+        </Button>
       </section>
 
       <section

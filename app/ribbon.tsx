@@ -8,7 +8,7 @@ interface RibbonSegmentProps {
 
 const RibbonSegment = ({ variant, className }: RibbonSegmentProps) => {
   return (
-    <div className={`relative flex h-[40px] items-center ${className}`}>
+    <div className={`relative flex h-[40px] w-full items-center ${className}`}>
       <hr
         className={`w-full border-dashed ${clsx({
           'border-primary': variant === 'light',
