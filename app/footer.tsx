@@ -1,6 +1,6 @@
 import { FaInstagram } from 'react-icons/fa';
 import { ImFacebook, ImLinkedin2, ImTwitter, ImYoutube } from 'react-icons/im';
-import { RibbonSegment } from './page';
+import RibbonSegment from './ribbon';
 
 const Footer = () => {
   return (
@@ -27,5 +27,6 @@ const Footer = () => {
     </footer>
   );
 };
+
 
 export default Footer;

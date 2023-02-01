@@ -3,63 +3,97 @@ import SealBackgroud from '@/components/SealBackgroud';
 import { mdiArrowDown, mdiCloseCircle, mdiSeal } from '@mdi/js';
 import Icon from '@mdi/react';
 import clsx from 'clsx';
+import { BsArrowDown } from 'react-icons/bs';
+import { IoRibbon } from 'react-icons/io5';
+import { MdCancel } from 'react-icons/md';
+import Button from './button';
+import RibbonSegment from './ribbon';
 
 export default function Home() {
   return (
     <main>
       <section
-        className={
-          'mt-6 flex flex-col px-8 pb-8 shadow-[0_17px_18px_rgba(0,0,0,0.25)] xl:px-0'
-        }
+        className={'shadow-[0_17px_18px_rgba(0,0,0,0.25)] xl:mt-[100px]'}
       >
-        <h1 className={'text-center font-playfair text-3xl font-medium'}>
-          Garantované výsledky ONLINE marketingu pre{' '}
-          <span className={'font-bold'}>elitné právnické firmy</span>
-        </h1>
-        <RibbonSegment className={'my-4'} variant={'dark'} />
-        <p className={'text-center font-raleway'}>
-          Dedikované výsledky web stránok a výkonostných kampaní pre tých
-          najlepších v právnickom odvetvií
-        </p>
-        <button className={'btn-primary mt-8'}>Získať ONLINE stratégiu</button>
+        <div
+          className={
+            'mx-auto mt-6 flex max-w-[740px] flex-col px-8 pb-8 xl:px-0 xl:pb-[75px]'
+          }
+        >
+          <h1
+            className={
+              'text-center font-playfair text-3xl font-medium xl:mx-auto xl:max-w-[540px] xl:text-5xl'
+            }
+          >
+            Garantované výsledky ONLINE marketingu pre{' '}
+            <span className={'font-extrabold'}>elitné právnické firmy</span>
+          </h1>
+          <RibbonSegment className={'my-4 xl:my-1'} variant={'dark'} />
+          <p className={'text-center font-raleway xl:text-2xl'}>
+            Dedikované výsledky web stránok a výkonostných kampaní pre tých
+            najlepších v právnickom odvetvií
+          </p>
+          <Button className={'mt-8 xl:mx-auto xl:max-w-[325px]'}>
+            Získať ONLINE stratégiu
+          </Button>
+        </div>
       </section>
 
-      <section className={'container bg-primaryDarker py-8'}>
-        <div>
-          <h2 className={'text-center font-playfair text-2xl font-semibold'}>
-            Prečo ONLINE Marketing?
-          </h2>
-          <p className={'mt-4 mb-7 text-center font-raleway'}>
-            Narovinu - stránka bez klientov je ako postaviť si pobočku v strede
-            púšte bez žiadnej cesty smerujúcej k nej.
-          </p>
-          <div className={'relative'}>
-            <div className={'absolute bottom-5 left-1'}>
-              <RoundText />
-              <Icon
-                path={mdiArrowDown}
-                className={'absolute inset-0 m-auto'}
-                size={1.5}
-              />
+      <section className={'bg-primaryDarker py-8 xl:py-[80px]'}>
+        <div className={'container gap-[145px] xl:flex'}>
+          <div
+            className={'text-center xl:max-w-[620px] xl:shrink-0 xl:text-start'}
+          >
+            <h2 className={'font-playfair text-2xl font-semibold xl:text-5xl'}>
+              Prečo ONLINE Marketing?
+            </h2>
+            <p className={'mt-4 mb-7 font-raleway xl:mb-4 xl:mt-8 xl:text-xl'}>
+              Narovinu - stránka bez klientov je ako postaviť si pobočku v
+              strede púšte bez žiadnej cesty smerujúcej k nej.
+            </p>
+            <hr className={'hidden w-[75px] border-[#ECEAD7] xl:block'} />
+            <div className={'relative xl:mt-16'}>
+              <div className={'absolute bottom-5 left-1 xl:left-24'}>
+                <RoundText />
+                <BsArrowDown
+                  className={'absolute inset-0 m-auto text-2xl xl:text-6xl'}
+                />
+              </div>
+              <div
+                className={
+                  'ml-auto h-[260px] w-[260px] bg-slate-600 xl:h-[440px] xl:w-[440px]'
+                }
+              ></div>
             </div>
-            <div className={'ml-auto h-[260px] w-[260px] bg-slate-600'}></div>
+          </div>
+          <div className={'mt-8 flex flex-col xl:mt-0'}>
+            <p
+              className={
+                'mb-6 text-center font-raleway xl:mb-0 xl:mt-auto xl:text-start xl:text-xl'
+              }
+            >
+              <span className={'font-bold'}>
+                Tu prichádza ONLINE Marketing.
+              </span>{' '}
+              Marketing je ako “Digitálna cesta”, ktorá vedie vášho vysneného
+              klienta ku vám s kreditnou kartou v jeho ruke
+            </p>
+            <div
+              className={'h-[315px] bg-slate-600 xl:order-first xl:h-[510px]'}
+            ></div>
           </div>
         </div>
-        <div className={'mt-8'}>
-          <p className={'mb-6 text-center font-raleway'}>
-            <span className={'font-bold'}>Tu prichádza ONLINE Marketing.</span>{' '}
-            Marketing je ako “Digitálna cesta”, ktorá vedie vášho vysneného
-            klienta ku vám s kreditnou kartou v jeho ruke
-          </p>
-          <div className={'h-[315px] bg-slate-600'}></div>
-        </div>
       </section>
 
-      <section className={'bg-white py-8'}>
-        <div className={'container flex flex-col gap-8'}>
+      <section className={'bg-white py-8 xl:py-[80px]'}>
+        <div
+          className={
+            'container flex flex-col gap-8 xl:grid xl:grid-cols-3 xl:gap-16'
+          }
+        >
           <div
             className={
-              'flex flex-col bg-primaryDarker px-5 py-8 text-center shadow-[0_17px_18px_rgba(0,0,0,0.25)]'
+              'flex flex-col bg-primaryDarker px-5 py-8 text-center shadow-[0_17px_18px_rgba(0,0,0,0.25)] xl:px-4 xl:py-10'
             }
           >
             <div className={'relative mx-auto'}>
@@ -74,82 +108,53 @@ export default function Home() {
                 }
               ></div>
             </div>
-            <h4 className={'mt-4 font-playfair text-xl font-semibold'}>
+            <h4
+              className={
+                'my-4 font-playfair text-xl font-semibold xl:mx-auto xl:max-w-[240px] xl:text-2xl'
+              }
+            >
               Efektívne online kampane
             </h4>
-            <p className={'mt-4 font-raleway'}>
+            <p className={'font-raleway'}>
               Vytvoríme vám kampane s jediným cieľom. Predať. Oslovíme vašu
               cieľovú skupinu, ktorá má pre vás najväčšiu hodnotu, tak aby
               chcela spolupracovať práve s vami.
             </p>
           </div>
-          <div
-            className={
-              'flex flex-col bg-primaryDarker px-3 py-8 text-center shadow-[0_17px_18px_rgba(0,0,0,0.25)]'
-            }
-          >
-            <div className={'relative mx-auto'}>
-              <div
-                className={
-                  'absolute -right-3 bottom-2 h-8 w-8 rounded-full bg-[#ECEAD7]'
-                }
-              />
-              <div
-                className={
-                  'h-20 w-20 rounded-full bg-primary/5 backdrop-blur-[35px]'
-                }
-              ></div>
-            </div>
-            <h4 className={'mt-4 font-playfair text-xl font-semibold'}>
-              Unikátny copywritting a predajné vizuály
-            </h4>
-            <p className={'mt-4 font-raleway'}>
-              Prezentácia a budovanie značky naprieč všetkými kanálmi je veľmi
-              dôležitou súčasťou celého online marketignu. Zastrešíme vašu
-              prezentáciu ako na webe, tak aj na sociálnych sieťach.
-            </p>
-          </div>
-          <div
-            className={
-              'flex flex-col bg-primaryDarker px-5 py-8 text-center shadow-[0_17px_18px_rgba(0,0,0,0.25)]'
-            }
-          >
-            <div className={'relative mx-auto'}>
-              <div
-                className={
-                  'absolute -left-3 bottom-2 h-8 w-8 rounded-full bg-[#ECEAD7]'
-                }
-              />
-              <div
-                className={
-                  'h-20 w-20 rounded-full bg-primary/5 backdrop-blur-[35px]'
-                }
-              ></div>
-            </div>
-            <h4 className={'mt-4 font-playfair text-xl font-semibold'}>
-              Moderný dizajn s úlohou získavania klientov
-            </h4>
-            <p className={'mt-4 font-raleway'}>
-              Hlavnou úlohou webstránky, je urobiť z potencionálnych zákazníkov
-              vašich klientov. Docielíme to pomocou jasnej štruktúry, textov a
-              dizajnu určeného na predaj.
-            </p>
-          </div>
         </div>
       </section>
 
-      <section className={'bg-primaryDarker px-8 pt-8 pb-16 xl:px-0'}>
-        <h2 className={'text-center font-playfair text-2xl'}>
+      <section
+        className={'bg-primaryDarker px-8 pt-8 pb-16 xl:px-0 xl:py-[80px]'}
+      >
+        <h2
+          className={
+            'text-center font-playfair text-2xl xl:mx-auto xl:max-w-[600px] xl:text-[40px] xl:leading-[55px]'
+          }
+        >
           Online kampane ako kľúč k vášmu online úspechu
         </h2>
-        <RibbonSegment className={'my-4'} variant={'darker'} />
-        <p className={'mb-8 mt-4 text-center font-raleway'}>
+        <RibbonSegment
+          className={'my-4 mx-auto max-w-[600px]'}
+          variant={'darker'}
+        />
+        <p
+          className={
+            'mb-8 mt-4 text-center font-raleway xl:mx-auto xl:max-w-[815px] xl:text-xl'
+          }
+        >
           Je to rozdiel medzi 1,929,999,999 stránkami ktoré nezarábajú peniaze a
           0.000000002%, ktoré zarabajú
         </p>
-        <div className={'flex flex-col'}>
+        <div
+          className={
+            'mx-auto flex flex-col xl:grid xl:max-w-[945px] xl:grid-cols-2 xl:gap-[95px]'
+          }
+        >
           <div
-            className={'flex h-[315px] items-center justify-center bg-primary'}
+            className={
+              'flex h-[315px] items-center justify-center bg-primary xl:h-[425px]'
+            }
           >
             <div
               className={'relative flex h-[95%] w-[95%] border border-white'}
@@ -180,7 +185,9 @@ export default function Home() {
               </div>
 
               <div className={'m-auto'}>
-                <h3 className={'font-playfair text-2xl font-semibold'}>
+                <h3
+                  className={'font-playfair text-2xl font-semibold xl:text-3xl'}
+                >
                   Bez kampaní
                 </h3>
                 <ul className={'mt-6 flex flex-col gap-3'}>
@@ -194,12 +201,11 @@ export default function Home() {
                       key={key}
                       className={'flex items-center gap-2 font-raleway'}
                     >
-                      <Icon
-                        path={mdiCloseCircle}
-                        color="#D94741"
-                        size={'20px'}
+                      <MdCancel
+                        color={'#D94741'}
+                        className={'text-xl xl:text-[25px]'}
                       />
-                      {text}
+                      <span className={'font-light xl:text-xl'}>{text}</span>
                     </li>
                   ))}
                 </ul>
@@ -210,93 +216,103 @@ export default function Home() {
       </section>
 
       <section
-        className={'container relative flex flex-col pt-16 pb-8 text-center'}
+        className={
+          'container relative flex flex-col pt-16 pb-8 text-center xl:pb-16'
+        }
       >
         <div className={'absolute -top-[30px] self-center'}>
           <SealBackgroud size={60} />
-          <Icon
-            path={mdiSeal}
-            className={'absolute inset-0 m-auto'}
-            size={'22px'}
-          />
+          <IoRibbon className={'absolute inset-0 m-auto text-[25px]'} />
         </div>
-        <h5 className={'font-raleway'}>Radi cítite opak smútku?</h5>
-        <h2 className={'mt-6 mb-8 font-playfair text-3xl'}>
+        <h5 className={'font-raleway xl:text-xl'}>Radi cítite opak smútku?</h5>
+        <h2
+          className={
+            'mt-6 mb-8 font-playfair text-3xl xl:mx-auto xl:max-w-[625px]'
+          }
+        >
           Získajte bezplatnú konzultáciu určenú právnické kancelárie
         </h2>
-        <button className={'btn-primary'}>Získať konzultáciu zadarmo</button>
+        <Button className={'xl:mx-auto xl:max-w-[385px] xl:text-xl'}>
+          Získať konzultáciu zadarmo
+        </Button>
       </section>
 
-      <section className={'container flex flex-col bg-white py-8 text-primary'}>
-        <h2 className={'text-center font-playfair text-3xl'}>
-          Pre koho je <span className={'font-bold'}>Online Launch</span> určený?
-        </h2>
-        <RibbonSegment variant={'light'} className={'mt-4 mb-6'} />
-        <div
-          className={'grid grid-cols-2 text-center font-raleway font-medium'}
-        >
-          <div className={'pr-2 pb-4'}>
-            <div className={'relative mx-auto mb-4 w-min'}>
-              <div
-                className={
-                  'absolute -right-[7px] top-[4px] h-4 w-4 rounded-full bg-primaryDarker'
-                }
-              />
-              <div
-                className={
-                  'h-9 w-9 rounded-full bg-black/5 backdrop-blur-[35px]'
-                }
-              ></div>
+      <section className={'bg-white py-8 text-primary xl:py-20'}>
+        <div className={'container flex flex-col'}>
+          <h2 className={'text-center font-playfair text-3xl'}>
+            Pre koho je <span className={'font-bold'}>Online Launch</span>{' '}
+            určený?
+          </h2>
+          <RibbonSegment
+            variant={'light'}
+            className={'mt-4 mb-6 xl:max-w-[600px]'}
+          />
+          <div
+            className={'grid grid-cols-2 text-center font-raleway font-medium'}
+          >
+            <div className={'pr-2 pb-4'}>
+              <div className={'relative mx-auto mb-4 w-min'}>
+                <div
+                  className={
+                    'absolute -right-[7px] top-[4px] h-4 w-4 rounded-full bg-primaryDarker'
+                  }
+                />
+                <div
+                  className={
+                    'h-9 w-9 rounded-full bg-black/5 backdrop-blur-[35px]'
+                  }
+                ></div>
+              </div>
+              <p>Pre začínajúcu právnicku kanceláriu</p>
             </div>
-            <p>Pre začínajúcu právnicku kanceláriu</p>
-          </div>
 
-          <div className={'border-l border-primary pl-2 pb-4'}>
-            <div className={'relative mx-auto mb-4 w-min'}>
-              <div
-                className={
-                  'absolute -right-[6px] bottom-[2px] h-4 w-4 rounded-full bg-primaryDarker'
-                }
-              />
-              <div
-                className={
-                  'h-9 w-9 rounded-full bg-black/5 backdrop-blur-[35px]'
-                }
-              ></div>
+            <div className={'border-l border-primary pl-2 pb-4'}>
+              <div className={'relative mx-auto mb-4 w-min'}>
+                <div
+                  className={
+                    'absolute -right-[6px] bottom-[2px] h-4 w-4 rounded-full bg-primaryDarker'
+                  }
+                />
+                <div
+                  className={
+                    'h-9 w-9 rounded-full bg-black/5 backdrop-blur-[35px]'
+                  }
+                ></div>
+              </div>
+              <p>Pre právnicku kanceláriu bez výsledkov online</p>
             </div>
-            <p>Pre právnicku kanceláriu bez výsledkov online</p>
-          </div>
 
-          <div className={'border-t border-primary pt-4 pr-2'}>
-            <div className={'relative mx-auto mb-4 w-min'}>
-              <div
-                className={
-                  'absolute -left-[6px] bottom-[2px] h-4 w-4 rounded-full bg-primaryDarker'
-                }
-              />
-              <div
-                className={
-                  'h-9 w-9 rounded-full bg-black/5 backdrop-blur-[35px]'
-                }
-              ></div>
+            <div className={'border-t border-primary pt-4 pr-2'}>
+              <div className={'relative mx-auto mb-4 w-min'}>
+                <div
+                  className={
+                    'absolute -left-[6px] bottom-[2px] h-4 w-4 rounded-full bg-primaryDarker'
+                  }
+                />
+                <div
+                  className={
+                    'h-9 w-9 rounded-full bg-black/5 backdrop-blur-[35px]'
+                  }
+                ></div>
+              </div>
+              <p>Pre právnicke kancelárie bez online stratégie</p>
             </div>
-            <p>Pre právnicke kancelárie bez online stratégie</p>
-          </div>
 
-          <div className={'border-t border-l border-primary pt-4 pl-2'}>
-            <div className={'relative mx-auto mb-4 w-min'}>
-              <div
-                className={
-                  'absolute -left-[7px] top-[4px] h-4 w-4 rounded-full bg-primaryDarker'
-                }
-              />
-              <div
-                className={
-                  'h-9 w-9 rounded-full bg-black/5 backdrop-blur-[35px]'
-                }
-              ></div>
+            <div className={'border-t border-l border-primary pt-4 pl-2'}>
+              <div className={'relative mx-auto mb-4 w-min'}>
+                <div
+                  className={
+                    'absolute -left-[7px] top-[4px] h-4 w-4 rounded-full bg-primaryDarker'
+                  }
+                />
+                <div
+                  className={
+                    'h-9 w-9 rounded-full bg-black/5 backdrop-blur-[35px]'
+                  }
+                ></div>
+              </div>
+              <p>Pre právnikov, ktorí chcú rásť</p>
             </div>
-            <p>Pre právnikov, ktorí chcú rásť</p>
           </div>
         </div>
       </section>
@@ -395,34 +411,5 @@ export default function Home() {
         </button>
       </section>
     </main>
-  );
-}
-
-export function RibbonSegment({
-  variant,
-  className,
-}: {
-  variant: 'dark' | 'light' | 'darker';
-  className?: string;
-}) {
-  return (
-    <div className={`relative flex h-[40px] items-center ${className}`}>
-      <hr
-        className={`w-full border-dashed ${clsx({
-          'border-primary': variant === 'light',
-          'border-white': variant === 'dark' || variant === 'darker',
-        })}`}
-      />
-      <Icon
-        color={variant === 'light' ? '#1E2D3D' : '#fff'}
-        path={mdiSeal}
-        className={`absolute inset-0 mx-auto h-full shrink-0 px-1 ${clsx({
-          'bg-white': variant === 'light',
-          'bg-primary': variant === 'dark',
-          'bg-primaryDarker': variant === 'darker',
-        })}`}
-        size={'40px'}
-      />
-    </div>
   );
 }
