@@ -7,6 +7,7 @@ import { BsArrowDown } from 'react-icons/bs';
 import { IoRibbon } from 'react-icons/io5';
 import { MdCancel } from 'react-icons/md';
 import Button from './button';
+import CampaignCard from './campaign';
 import RibbonSegment from './ribbon';
 
 export default function Home() {
@@ -121,6 +122,68 @@ export default function Home() {
               chcela spolupracovať práve s vami.
             </p>
           </div>
+
+          <div
+            className={
+              'flex flex-col bg-primaryDarker px-5 py-8 text-center shadow-[0_17px_18px_rgba(0,0,0,0.25)] xl:px-4 xl:py-10'
+            }
+          >
+            <div className={'relative mx-auto'}>
+              <div
+                className={
+                  'absolute -right-3 bottom-2 h-8 w-8 rounded-full bg-[#ECEAD7]'
+                }
+              />
+              <div
+                className={
+                  'h-20 w-20 rounded-full bg-primary/5 backdrop-blur-[35px]'
+                }
+              ></div>
+            </div>
+            <h4
+              className={
+                'my-4 font-playfair text-xl font-semibold xl:mx-auto xl:max-w-[270px] xl:text-2xl'
+              }
+            >
+              Unikátny copywritting a predajné vizuály
+            </h4>
+            <p className={'font-raleway'}>
+              Prezentácia a budovanie značky naprieč všetkými kanálmi je veľmi
+              dôležitou súčasťou celého online marketignu. Zastrešíme vašu
+              prezentáciu ako na webe, tak aj na sociálnych sieťach.
+            </p>
+          </div>
+
+          <div
+            className={
+              'flex flex-col bg-primaryDarker px-5 py-8 text-center shadow-[0_17px_18px_rgba(0,0,0,0.25)] xl:px-4 xl:py-10'
+            }
+          >
+            <div className={'relative mx-auto'}>
+              <div
+                className={
+                  'absolute -left-3 bottom-2 h-8 w-8 rounded-full bg-[#ECEAD7]'
+                }
+              />
+              <div
+                className={
+                  'h-20 w-20 rounded-full bg-primary/5 backdrop-blur-[35px]'
+                }
+              ></div>
+            </div>
+            <h4
+              className={
+                'my-4 font-playfair text-xl font-semibold xl:mx-auto xl:max-w-[240px] xl:text-2xl'
+              }
+            >
+              Moderný dizajn s úlohou získavania klientov
+            </h4>
+            <p className={'font-raleway'}>
+              Prezentácia a budovanie značky naprieč všetkými kanálmi je veľmi
+              dôležitou súčasťou celého online marketignu. Zastrešíme vašu
+              prezentáciu ako na webe, tak aj na sociálnych sieťach.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -148,70 +211,29 @@ export default function Home() {
         </p>
         <div
           className={
-            'mx-auto flex flex-col xl:grid xl:max-w-[945px] xl:grid-cols-2 xl:gap-[95px]'
+            'mx-auto flex flex-col gap-6 xl:grid xl:max-w-[945px] xl:grid-cols-2 xl:gap-[95px]'
           }
         >
-          <div
-            className={
-              'flex h-[315px] items-center justify-center bg-primary xl:h-[425px]'
-            }
-          >
-            <div
-              className={'relative flex h-[95%] w-[95%] border border-white'}
-            >
-              {/* Top right */}
-              <div
-                className={
-                  'absolute top-[10px] right-[10px] h-[70px] w-10 border-t border-r border-white'
-                }
-              >
-                <div
-                  className={
-                    'absolute top-[10px] right-[10px] h-8 w-3 border-t border-r'
-                  }
-                />
-              </div>
-              {/* Bottom left */}
-              <div
-                className={
-                  'absolute bottom-[10px] left-[10px] h-[70px] w-10 border-b border-l border-white'
-                }
-              >
-                <div
-                  className={
-                    'absolute bottom-[10px] left-[10px] h-8 w-3 border-b border-l'
-                  }
-                />
-              </div>
-
-              <div className={'m-auto'}>
-                <h3
-                  className={'font-playfair text-2xl font-semibold xl:text-3xl'}
-                >
-                  Bez kampaní
-                </h3>
-                <ul className={'mt-6 flex flex-col gap-3'}>
-                  {[
-                    'Nestabilny tok klientov',
-                    'Chaotické získavanie klientov',
-                    'Slabé povedomie o značke',
-                    'Smútok',
-                  ].map((text, key) => (
-                    <li
-                      key={key}
-                      className={'flex items-center gap-2 font-raleway'}
-                    >
-                      <MdCancel
-                        color={'#D94741'}
-                        className={'text-xl xl:text-[25px]'}
-                      />
-                      <span className={'font-light xl:text-xl'}>{text}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
+          <CampaignCard
+            iconVariant={'error'}
+            title={'Bez kampaní'}
+            bulletPoints={[
+              'Nestabilny tok klientov',
+              'Chaotické získavanie klientov',
+              'Slabé povedomie o značke',
+              'Smútok',
+            ]}
+          />
+          <CampaignCard
+            iconVariant={'success'}
+            bulletPoints={[
+              'Stabilný tok klientov',
+              'Prehladné získavanie klientov',
+              'Silné povedomie',
+              'Opak smútku',
+            ]}
+            title={'S kampaňami'}
+          />
         </div>
       </section>
 
